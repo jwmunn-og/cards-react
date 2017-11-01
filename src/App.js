@@ -10,14 +10,12 @@ class App extends Component {
   }
   render() {
     const deck = this.state.deck;
-    const cards = [];
-    deck.cards.forEach( (card, index) => {
-      const htmlElement = (
+    const cards = deck.cards.map( (card, index) => {
+      return (
         <p key={index}>
           {card.rank} of {card.suit}
         </p>
       );
-      cards.push(htmlElement);
     });
 
     return (
