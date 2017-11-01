@@ -3,8 +3,13 @@ import Deck from './helpers/Deck.js';
 import './App.css';
 
 class App extends Component {
+  componentWillMount() {
+    this.setState({
+      deck: new Deck()
+    });
+  }
   render() {
-    const deck = new Deck();
+    const deck = this.state.deck;
 
     return (
       <div className="App">
