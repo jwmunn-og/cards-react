@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Deck from './helpers/Deck.js';
+import PlayingCard from './PlayingCard.js';
 import './App.css';
 
 class App extends Component {
@@ -12,9 +13,7 @@ class App extends Component {
     const deck = this.state.deck;
     const cards = deck.cards.map( (card, index) => {
       return (
-        <p key={index}>
-          {card.rank} of {card.suit}
-        </p>
+        <PlayingCard suit={card.suit} rank={card.rank} index={index} />
       );
     });
 
