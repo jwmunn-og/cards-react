@@ -25,7 +25,9 @@ class App extends Component {
             Object Oriented Programming and Templating in JavaScript
            </p>
         </header>
-        {cards}
+        <div className="game">
+          {cards}
+        </div>
       </div>
     );
   }

@@ -3,9 +3,12 @@ import React from 'react';
 export default class PlayingCard extends React.Component {
   render () {
     return (
-      <p key={this.props.index}>
-        {this.props.rank} of {this.props.suit}
-      </p>
+      <div className="card hvr-grow-rotate" key={this.props.index}>
+        <img
+          src={`images/${this.props.rank}_of_${this.props.suit}.png`}
+          alt={`{this.props.rank} of {this.props.suit}`}
+        />
+      </div>
     );
   }
 }
